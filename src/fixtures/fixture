@@ -1,0 +1,20 @@
+/**
+ * Very Imp
+ * Fixtures: what do you mean by fixtures -> supply the data/page object to the test methods using 'use' inbult callback function.
+ * inbuilt or in simple way it is helping me to creating
+ * the repository of all the page objects.not only for pages, we can supply testData as well like--CSV, this is the way autobinding will happen
+ * and data will supply to each and every page.and let the test decide what exactly they want from repository.
+ *
+ * 2 types:
+ *
+ * 1. Inbuilt fixture : pw test runner automatically give it you ie -> page, browser, request(used for api calling), expect
+ *
+ * 2. Custom fixtures: pageobjects: loginPage, homePage, cartPage,.....10 pages -> and then this I want supply each and every test
+ *  it is helping me to creating
+ * the repository of all the page objects.not only for pages, we can supply testData as well like--CSV, this is the way autobinding will happen
+ * and data will supply to each and every page.and let the test decide what exactly they want from repository.
+ *
+ *
+ *
+ *
+ */
