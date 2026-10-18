@@ -1,4 +1,3 @@
-
 name: Playwright Tests
 
 on:
@@ -19,7 +18,6 @@ on:
           - QA
           - stage
           - dev
-
 
 jobs:
   test:
@@ -48,7 +46,7 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers
-       # if: steps.playwright-cache.outputs.cache-hit != 'true'
+        # if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
       - name: Install Playwright OS deps only (if cached)
@@ -67,7 +65,7 @@ jobs:
       - name: Run tests
         run: npx playwright test --project=chromium
         env:
-          ENV:qa
+          ENV: qa
           BASE_URL: ${{ secrets.BASE_URL }}
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
