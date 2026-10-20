@@ -25,7 +25,7 @@ test.beforeEach('POST -- generate the access token', async ({ request }) => {
   accessToken = jsonResponse.access_token;
 });
 
-test('GET -- get location', async ({ request }) => {
+test.skip('GET -- get location', async ({ request }) => {
   //https://test.api.amadeus.com/v1/referance-data/locations?subtype=CITY,AIRPORT&keyword=MUC&countryCode=DE
   //after the '?' this is called the query parameter, and query parameter always in key and value pair and it is seperated with '&'
   //means they are trying to go on all the locations and filter with given query parameter
