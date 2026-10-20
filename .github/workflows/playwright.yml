@@ -1,12 +1,12 @@
 name: Playwright Tests
 
 on:
-  # schedule:
-  #   - cron: '30 21 * * 1-4'  # Mon-Fri 8PM IST
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  schedule:
+    - cron: '30 21 * * 1-4' # Mon-Fri 8PM IST
+  # push:
+  #   branches: [main]
+  # pull_request:
+  #   branches: [main]
   workflow_dispatch:
     inputs:
       environment:
@@ -46,7 +46,7 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers
-        # if: steps.playwright-cache.outputs.cache-hit != 'true'
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
       - name: Install Playwright OS deps only (if cached)
