@@ -1,0 +1,74 @@
+[
+  {
+    id: 8680155,
+    name: 'Jyoti pw test',
+    email: 'jyoti_1792681862497@opennew.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8680153,
+    name: 'Jyoti API Updated',
+    email: 'automation_1792681860192@open.com',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8680152,
+    name: 'Jyoti API',
+    email: 'automation_1792681859163@open.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8679146,
+    name: 'Jyoti pw test new',
+    email: 'jyoti_1792659605874@open.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8679144,
+    name: 'Jyoti pw test',
+    email: 'jyoti_1792659603515@opennew.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8679142,
+    name: 'Jyoti API Updated',
+    email: 'automation_1792659601708@open.com',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8679141,
+    name: 'Jyoti API',
+    email: 'automation_1792659600315@open.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8679051,
+    name: 'Jyoti pw test new',
+    email: 'jyoti_1792657565581@open.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8679049,
+    name: 'Jyoti pw test',
+    email: 'jyoti_1792657562791@opennew.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8679047,
+    name: 'Jyoti API Updated',
+    email: 'automation_1792657561086@open.com',
+    gender: 'male',
+    status: 'inactive'
+  }
+]
+200
+OK

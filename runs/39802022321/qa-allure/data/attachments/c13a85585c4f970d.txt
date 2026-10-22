@@ -1,0 +1,8 @@
+{
+  id: 8680156,
+  name: 'Jyoti API',
+  email: 'automation_1792681864746@open.com',
+  gender: 'male',
+  status: 'active'
+}
+Created User Id:  8680156

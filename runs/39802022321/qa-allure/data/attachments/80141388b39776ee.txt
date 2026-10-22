@@ -1,0 +1,11 @@
+{
+  status: 201,
+  body: {
+    id: 8680155,
+    name: 'Jyoti pw test',
+    email: 'jyoti_1792681862497@opennew.com',
+    gender: 'female',
+    status: 'active'
+  }
+}
+userId:  8680155
