@@ -17,7 +17,6 @@ on:
         options:
           - QA
           - stage
-          - dev
 
 jobs:
   test:
@@ -65,7 +64,8 @@ jobs:
       - name: Run tests
         run: npx playwright test --project=chromium
         env:
-          ENV: qa
+          #ENV: qa
+          ENV: ${{ github.event.inputs.environment || 'QA' }}
           BASE_URL: ${{ secrets.BASE_URL }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
