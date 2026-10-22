@@ -7,15 +7,15 @@ test.beforeEach(async ({ loginPage }) => {
   await loginPage.doLogin(process.env.USER_EMAIL!, process.env.USER_PASSWORD!);
 });
 
-test('comp logo exists on product page', async ({ basePage }) => {
+test('@sanity comp logo exists on product page', async ({ basePage }) => {
   expect(await basePage.isLogoVisible()).toBeTruthy();
 });
 
-test('footer exist on product page', async ({ basePage }) => {
+test('@sanity footer exist on product page', async ({ basePage }) => {
   expect(await basePage.getPageFooterCount()).toBe(16);
 });
 
-test('verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@smoke verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
   await homePage.doSearch('macbook');
   await searchResultsPage.selectProduct('MacBook Pro');
   let imgCount = await productInfoPage.getProductImagesCount();
@@ -23,7 +23,7 @@ test('verify product images count', async ({ homePage, searchResultsPage, produc
   expect(imgCount).toBe(4);
 });
 
-test('verify product information/Data', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@smoke verify product information/Data', async ({ homePage, searchResultsPage, productInfoPage }) => {
   await homePage.doSearch('macbook');
   await searchResultsPage.selectProduct('MacBook Pro');
   let actualProductInfoMap = await productInfoPage.getProductInfo();
@@ -36,7 +36,7 @@ test('verify product information/Data', async ({ homePage, searchResultsPage, pr
   expect.soft(actualProductInfoMap.get('ExTaxPrice')).toBe('$2,000.00');
 });
 
-test('user able to add product in cart', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@regression user able to add product in cart', async ({ homePage, searchResultsPage, productInfoPage }) => {
   await homePage.doSearch('macbook');
   await searchResultsPage.selectProduct('MacBook Pro');
   await productInfoPage.addToCartProduct('2');

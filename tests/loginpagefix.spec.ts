@@ -15,18 +15,18 @@ test('login page title test', async ({ loginPage }) => {
   expect(pageTitle).toBe('Account Login');
 });
 
-test('forgot pwd link exist test', async ({ loginPage }) => {
+test('@sanity  forgot pwd link exist test', async ({ loginPage }) => {
   expect(await loginPage.isForgotPwdLinkExist()).toBeTruthy();
 });
 
-test('user able to login to app test', async ({ loginPage, homePage }) => {
+test('@sanity user able to login to app test', async ({ loginPage, homePage }) => {
   await loginPage.doLogin(process.env.USER_EMAIL!, process.env.USER_PASSWORD!);
   expect.soft(await homePage.isLogoutLinkExist()).toBeTruthy();
   expect.soft(await homePage.getPageTitle()).toBe('My Account');
 });
 
 //DD_1. sequence mode -- only 1 test is running with test data one by one using testData from fixture
-test('login to app using wrong credentials with data driven test', async ({ loginPage, testData }) => {
+test('@smoke login to app using wrong credentials with data driven test', async ({ loginPage, testData }) => {
   //testdata is kind of array so iterate it using for loop
   for (let row of testData) {
     await loginPage.doLogin(row.username, row.password);
@@ -37,7 +37,7 @@ test('login to app using wrong credentials with data driven test', async ({ logi
 //DD_2. without fixture, parallel mode. read the csv data directly and loop the test method row wise..
 let testData = CsvHelper.readCsv('src/data/logindata.csv');
 for (let row of testData) {
-  test(`invalid login test with - ${row.username} - ${row.password}`, async ({ loginPage }) => {
+  test(`@smoke invalid login test with - ${row.username} - ${row.password}`, async ({ loginPage }) => {
     await loginPage.doLogin(row.username, row.password);
     expect(await loginPage.isInvalidErrorDisplayed()).toBeTruthy();
   });
@@ -45,7 +45,7 @@ for (let row of testData) {
 
 let loginTestData = ExcelHelper.readExcel('src/data/OpenCartTestData.xlsx');
 for (let row of loginTestData) {
-  test(`invalid login test with excel data - ${row.username} - ${row.password}`, async ({ loginPage }) => {
+  test(`@regression invalid login test with excel data - ${row.username} - ${row.password}`, async ({ loginPage }) => {
     await loginPage.doLogin(row.username, row.password);
     expect(await loginPage.isInvalidErrorDisplayed()).toBeTruthy();
   });
@@ -53,7 +53,7 @@ for (let row of loginTestData) {
 
 let loginJsonData = JsonHelper.readJson('src/data/loginData.json');
 for (let row of loginJsonData) {
-  test(`invalid login test with json data - ${row.username} - ${row.password}`, async ({ loginPage }) => {
+  test(`@regression invalid login test with json data - ${row.username} - ${row.password}`, async ({ loginPage }) => {
     await loginPage.doLogin(row.username, row.password);
     expect(await loginPage.isInvalidErrorDisplayed()).toBeTruthy();
   });
