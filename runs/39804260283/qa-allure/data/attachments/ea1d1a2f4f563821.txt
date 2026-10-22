@@ -1,0 +1,7 @@
+{
+  id: 8680259,
+  name: 'Jyoti API',
+  email: 'automation_1792683072848@open.com',
+  gender: 'male',
+  status: 'active'
+}

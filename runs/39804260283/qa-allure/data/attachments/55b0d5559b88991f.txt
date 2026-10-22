@@ -1,0 +1,4 @@
+user creds: pwbatchtest@open.com: pw123
+search key: macbook
+Product quantity:  2
+Success: You have added MacBook Pro to your shopping cart!×

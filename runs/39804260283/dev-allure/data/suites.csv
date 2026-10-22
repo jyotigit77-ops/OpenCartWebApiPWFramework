@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2991","@smoke invalid login test with - pwtestbatch@open.com -","chromium","2026-10-22","passed","2026-10-22","","loginpagefix.spec.ts","",""
+"","6105","@smoke verify product information/Data","chromium","2026-10-22","passed","2026-10-22","","productpage.spec.ts","",""
+"","11292","@smoke verify product images count","chromium","2026-10-22","passed","2026-10-22","","productpage.spec.ts","",""
+"","2555","@smoke invalid login test with - invalid@open.com - wrong123","chromium","2026-10-22","passed","2026-10-22","","loginpagefix.spec.ts","",""
+"","2373","@smoke invalid login test with - - pw1234","chromium","2026-10-22","passed","2026-10-22","","loginpagefix.spec.ts","",""
+"","3976","@smoke login to app using wrong credentials with data driven test","chromium","2026-10-22","passed","2026-10-22","","loginpagefix.spec.ts","",""
